@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Do You Love Me?</title>
+
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      h1 {
+        margin-bottom: 30px;
+        color: #333;
+      }
+
+      .buttons {
+        margin-right: 145px;
+        position: relative;
+        display: inline-block;
+      }
+
+      button {
+        width: 110px;
+        padding: 5px 0;
+        font-size: 25px;
+        border: none;
+        border-radius: 15px;
+        letter-spacing: 2px;
+        cursor: pointer;
+      }
+
+      #yesBtn {
+        background: #28a745;
+        color: white;
+      }
+
+      #noBtn {
+        background: #dc3545;
+        color: white;
+        position: absolute;
+        left: 120px;
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Do you love CCDETH? ❤️</h1>
+      <div class="buttons">
+        <button id="yesBtn" onclick="sayYes()">yes😍</button>
+        <button id="noBtn">no😢</button>
+      </div>
+    </div>
+
+    <script>
+      const notBtn = document.querySelector("#noBtn");
+      let isFixed = false;
+
+      <Image.src="https://scontent.fpnh12-1.fna.fbcdn.net/v/t39.30808-6/561906832_122099646423070539_2913261993070426405_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=100&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Zv-r4p1W0igQ7kNvwGsU90M&_nc_oc=Adre44ownqhUosB7T-BUEVFzq3B_qXexdPPViW6rdxzC36C3yttRq9Ja-ekGJSxk7Mk&_nc_zt=23&_nc_ht=scontent.fpnh12-1.fna&_nc_gid=kMQMtHlDTEIZ1aLS4oMkEw&_nc_ss=7a3a8&oh=00_AfyLBC3zp7mvh2Nv0duPbNz1FRWJcZLWTMnB8fglVzErJg&oe=69D17B9F"
+      <image.src="phone.jpg"alt=""></image
+
+      notBtn.addEventListener("mouseenter", moveButton);
+
+      function moveButton(e) {
+        const padding = 20;
+        const maxX = window.innerWidth - noBtn.offsetWidth - padding;
+        const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+
+        let newX, newY;
+        while (true) {
+          newX = Math.random() * maxX;
+          newY = Math.random() * maxY;
+
+          if ((newX - e.clientX) ** 2 + (newY - e.clientY) ** 2 >= 150 * 150) {
+            break;
+          }
+        }
+        if (!isFixed) {
+          const rect = notBtn.getBoundingClientRect();
+          noBtn.style.position = "fixed";
+          notBtn.style.left = rect.left + "px";
+          notBtn.style.top = rect.top + "px";
+
+          noBtn.offsetHeight;
+          noBtn.style.transition = "left 0.3s ease, top 0.3s ease";
+
+          isFixed = true;
+        }
+
+        notBtn.style.left = newX + "px";
+        notBtn.style.top = newY + "px";
+      }
+      function sayYes() {
+        alert("bach slanh nh heh !");
+      }
+    </script>
+  </body>
+</html>
